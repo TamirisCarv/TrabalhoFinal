@@ -4,7 +4,7 @@ let taskInput = document.getElementById("taskInput");
 let dateInput = document.getElementById("dateInput");
 let warningDesc = document.getElementById("warningDesc");
 let warningDate = document.getElementById("warningDate");
-let teste = dateInput.value;
+
 
 
 
