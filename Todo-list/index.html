@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do List</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="tasks-content">
+        <div class="create-task">
+          <h2 class="title">To-do list</h2>
+          <form>
+            <div class="input">
+              <input
+                type="text"
+                name="taskInput"
+                id="taskInput"
+                placeholder="Descrição da tarefa"
+                required
+              />
+              <div class="warning" id="warningDesc">
+                <img src="../Todo-list/assets/warning.svg" alt="ícone de alerta" />
+                A Descrição é obrigatória
+              </div>
+            </div>
+            <div class="input">
+              <input
+                type="date"
+                name="dateInput"
+                id="dateInput"
+                placeholder="Data da tarefa"
+                class="calendar"
+                required 
+              />
+              <div class="warning" id="warningDate">
+                <img src="../Todo-list/assets/warning.svg" alt="ícone de alerta" />
+                Escolha a data da tarefa
+              </div>
+            </div>
+          </form>
+          <button class="inserirButton" onclick="createTask()">
+            Inserir tarefa
+          </button>
+          <button class="ordenarButton" onclick="sortTasksByDate()">
+            Ordenar por data
+          </button>
+        </div>
+
+        <div class="tasks">
+          <ul>
+
+            <li>
+              <input type="checkbox" />
+              <div class="task-info">
+                <h4>Testando mais uma vez com div</h4>
+                <span>2023-06-15</span>
+              </div>
+              <button><ion-icon name="close-outline"></ion-icon></button>
+            </li>
+
+            <!-- <li class="checked">
+              <input type="checkbox" /> ORIGINAL - 2023-06-15
+              <button>X</button>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="../Todo-list/index.js"></script>
+  </body>
+</html>
